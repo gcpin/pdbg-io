@@ -1,4 +1,5 @@
 #include "target.H"
+#include <hwaccess.H>
 
 namespace TARGETING::internal
 {

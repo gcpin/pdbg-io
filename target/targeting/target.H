@@ -19,7 +19,6 @@ extern "C"
 #include <vector>
 namespace TARGETING
 {
-
 // Owning pointers
 using TargetUniquePtr = std::unique_ptr<Target>;
 using TargetUniquePtrList = std::vector<TargetUniquePtr>;
@@ -31,6 +30,7 @@ using TargetPtrList = std::vector<TargetPtr>;
 using ConstTargetPtrList = std::vector<ConstTargetPtr>;
 
 class TargetDevtreeMap;
+class HwAccessInterface;
 class Target
 {
     friend class TargetDevtreeMap;
@@ -52,6 +52,7 @@ class Target
 
     const void* _fdt = nullptr;
     int _offset = -1;
+    HwAccessInterface* hwAccessPtr = nullptr;
 };
 
 namespace internal

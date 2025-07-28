@@ -21,6 +21,7 @@
 #include <array>
 #endif
 
+#include <attributeenums.H>
 #include <attributestructs.H>
 #include <entitypath.H>
 namespace TARGETING
@@ -305,6 +306,20 @@ template <> class AttributeTraits<ATTR_AFFINITY_PATH>
         fspAccessible
     };
     typedef EntityPath Type;
+#if __cplusplus >= 201103L
+#endif
+};
+template <> class AttributeTraits<ATTR_HWACCESS_TYPE>
+{
+  public:
+    enum
+    {   writeable,
+        readable,
+        notHbMutex,
+        notFspMutex,
+        fspAccessible
+    };
+    typedef HWACCESS_TYPE Type;
 #if __cplusplus >= 201103L
 #endif
 };

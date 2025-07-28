@@ -26,6 +26,7 @@ enum ATTRIBUTE_ID
     ATTR_POSITION,
     ATTR_AFFINITY_PATH,
     ATTR_CLASS,
+    ATTR_HWACCESS_TYPE,
 };
 
 /**
@@ -153,6 +154,14 @@ enum ENGINE_TYPE
     ENGINE_TYPE_ENGINE_IIC = 0x00000001,
     ENGINE_TYPE_ENGINE_SCOM = 0x00000002,
     ENGINE_TYPE_INVALID = 0xFFFFFFFF,
+};
+/**
+ *  @brief Enumeration indicating the hwAccess type
+ */
+enum HWACCESS_TYPE
+{
+    DIRECT = 1,
+    SBEFIFO,
 };
 
 // TODO:need to use auto-generated targAttrIdToName.C

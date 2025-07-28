@@ -7,6 +7,7 @@ targeting_lib_sources = files(
   'targeting/target.C',
   'targeting/dtree_loader.C',
   'targeting/common/entitypath.C',
+  'targeting/hwaccess/hwaccess.C',
   'targeting/target_devtree_map.C',
   'targeting/predicates/predicatepostfixexpr.C',
 )
@@ -15,6 +16,7 @@ targeting_inc = include_directories(
   'targeting', 
   'targeting/xmltohb', 
   'targeting/common', 
+  'targeting/hwaccess',
   'targeting/predicates', 
 )
 
