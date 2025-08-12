@@ -12,3 +12,4 @@ project(
 cpp = meson.get_compiler('cpp')
 
 subdir('target')  # Delegates to target/meson.build
+subdir('hwaccess')

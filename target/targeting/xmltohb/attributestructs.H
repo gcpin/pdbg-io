@@ -19,8 +19,8 @@
 
 // Targeting component
 #include <builtins.h>
-#include <targeting/common/attributes.H>
-#include <targeting/common/entitypath.H>
+#include <attributes.H>
+#include <entitypath.H>
 
 //******************************************************************************
 // Complex Types

@@ -27,6 +27,13 @@ targeting_lib = static_library(
   dependencies: libfdt_dep,
 )
 
+# create external dependency variable
+targeting_dep = declare_dependency(
+  link_with: targeting_lib,
+  include_directories: [libfdt_inc, targeting_inc],
+  dependencies: libfdt_dep
+)
+
 # Now define your executable which depends on that lib
 executable('targeting-app',
   'main.C',

@@ -24,8 +24,8 @@
 #include <array>
 #endif
 
-#include <targeting/common/entitypath.H>
-#include <targeting/xmltohb/attributestructs.H>
+#include <entitypath.H>
+#include <attributestructs.H>
 namespace TARGETING
 {
 
