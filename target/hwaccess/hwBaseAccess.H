@@ -3,6 +3,7 @@
 #include <target.H>
 #include <attributeenums.H>
 #include <attributetraits.H>
+#include <hwAccessIntf.H>
 
 namespace hwaccess
 {
