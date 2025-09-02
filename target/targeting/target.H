@@ -5,7 +5,7 @@
 #include <targeting/xmltohb/attributetraits.H>
 extern "C"
 {
-#include <libfdt.h>
+#include <libfdt/libfdt.h>
 }
 
 #include <cstring>

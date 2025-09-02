@@ -9,7 +9,7 @@
 #include <string>
 extern "C"
 {
-#include <libfdt.h>
+#include <libfdt/libfdt.h>
 }
 namespace TARGETING
 {
