@@ -37,7 +37,7 @@ libfdt = library(
   install: get_option('default_library') != 'static' or not wheel_only,
 )
 
-libfdt_inc = include_directories('.')
+libfdt_inc = include_directories('..')
 
 libfdt_dep = declare_dependency(
   include_directories: libfdt_inc,

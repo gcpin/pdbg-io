@@ -1,9 +1,9 @@
 #include "target_service.H"
 extern "C"
 {
-#include <libfdt.h>
+#include <libfdt/libfdt.h>
 }
-#include <hw_access_intf.H>
+#include <hwaccess/hw_access_intf.H>
 
 #include <fstream>
 #include <vector>

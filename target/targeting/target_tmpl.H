@@ -1,6 +1,6 @@
 #pragma once
 
-#include <libfdt.h>
+#include <libfdt/libfdt.h>
 #include <targeting/common/entitypath.H>
 #include <targeting/xmltohb/attributeenums.H>
 #include <targeting/xmltohb/attributetraits.H>

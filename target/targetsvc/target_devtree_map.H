@@ -5,7 +5,7 @@
 #include <targeting/common/entitypath.H>
 extern "C"
 {
-#include <libfdt.h>
+#include <libfdt/libfdt.h>
 }
 #include <targeting/association.H>
 #include <targeting/predicates/predicatebase.H>

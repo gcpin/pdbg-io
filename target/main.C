@@ -13,7 +13,7 @@
 #include <iostream>
 extern "C"
 {
-#include <libfdt.h>
+#include <libfdt/libfdt.h>
 }
 
 using namespace TARGETING;

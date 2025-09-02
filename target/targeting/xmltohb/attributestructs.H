@@ -18,7 +18,7 @@
 #include <stdlib.h>
 
 // Targeting component
-#include <builtins.h>
+#include "builtins.h"
 
 #include <targeting/common/entitypath.H>
 

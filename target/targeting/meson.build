@@ -5,7 +5,7 @@ targeting_lib_sources = files(
     'xmltohb/targAttrIdToName.C',
 )
 
-targeting_inc = include_directories('..', '.', 'xmltohb', 'common', 'predicates')
+targeting_inc = include_directories('..')
 
 targeting_lib = shared_library(
     'targeting',
