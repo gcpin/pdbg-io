@@ -7,7 +7,7 @@ namespace hwaccess
 {
 using HwAccessPtr = TARGETING::AttributeTraits<TARGETING::ATTR_HW_ACCESS_PTR>::Type;
 
-int HwAccessIntf::getCfamRegister(TargetPtr_t target, uint32_t addr, uint32_t& val)
+int HwAccessIntf::getCfamRegister(ConstTargetPtr_t target, uint32_t addr, uint32_t& val)
 {
     if(target == nullptr)
     {
@@ -27,7 +27,7 @@ int HwAccessIntf::getCfamRegister(TargetPtr_t target, uint32_t addr, uint32_t& v
     return hwAccessPtr->getCfam(target, addr, val);
 }
 
-int HwAccessIntf::putCfamRegister(TargetPtr_t target, uint32_t addr, uint32_t val)
+int HwAccessIntf::putCfamRegister(ConstTargetPtr_t target, uint32_t addr, uint32_t val)
 {
     if(target == nullptr)
     {
@@ -47,7 +47,7 @@ int HwAccessIntf::putCfamRegister(TargetPtr_t target, uint32_t addr, uint32_t va
     return hwAccessPtr->putCfam(target, addr, val);
 }
 
-int HwAccessIntf::getScomRegister(TargetPtr_t target, uint64_t addr, uint64_t& val)
+int HwAccessIntf::getScomRegister(ConstTargetPtr_t target, uint64_t addr, uint64_t& val)
 {
     if(target == nullptr)
     {
@@ -67,7 +67,7 @@ int HwAccessIntf::getScomRegister(TargetPtr_t target, uint64_t addr, uint64_t& v
     return hwAccessPtr->getScom(target, addr, val);
 }
 
-int HwAccessIntf::putScomRegister(TargetPtr_t target, uint64_t addr, uint64_t val)
+int HwAccessIntf::putScomRegister(ConstTargetPtr_t target, uint64_t addr, uint64_t val)
 {
     if(target == nullptr)
     {

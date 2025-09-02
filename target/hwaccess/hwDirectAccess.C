@@ -10,7 +10,7 @@ HwDirectAccess& HwDirectAccess::getInstance()
     return directAccessInstance;
 }
 
-int HwDirectAccess::getScom(TargetPtr_t target, uint64_t addr, uint64_t& val)
+int HwDirectAccess::getScom(ConstTargetPtr_t target, uint64_t addr, uint64_t& val)
 {
     if(target == nullptr)
     {
@@ -21,7 +21,7 @@ int HwDirectAccess::getScom(TargetPtr_t target, uint64_t addr, uint64_t& val)
     return transport::direct::getScom(target, addr, val);
 }
 
-int HwDirectAccess::putScom(TargetPtr_t target, uint64_t addr, uint64_t val)
+int HwDirectAccess::putScom(ConstTargetPtr_t target, uint64_t addr, uint64_t val)
 {
     if(target == nullptr)
     {

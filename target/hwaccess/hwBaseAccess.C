@@ -4,7 +4,7 @@
 
 namespace hwaccess
 {
-int HwBaseAccess::getCfam(TargetPtr_t target, uint32_t addr, uint32_t& val)
+int HwBaseAccess::getCfam(ConstTargetPtr_t target, uint32_t addr, uint32_t& val)
 {
     if(target == nullptr)
     {
@@ -15,7 +15,7 @@ int HwBaseAccess::getCfam(TargetPtr_t target, uint32_t addr, uint32_t& val)
     return transport::direct::getCfam(target, addr, val);
 }
 
-int HwBaseAccess::putCfam(TargetPtr_t target, uint32_t addr, uint32_t val)
+int HwBaseAccess::putCfam(ConstTargetPtr_t target, uint32_t addr, uint32_t val)
 {
     if(target == nullptr)
     {

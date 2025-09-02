@@ -7,7 +7,7 @@
 namespace hwaccess
 {
 using HwAccessMethod = TARGETING::AttributeTraits<TARGETING::ATTR_HW_ACCESS_METHOD>::Type;
-using TargetPtr_t = TARGETING::TargetPtr;
+using ConstTargetPtr_t = TARGETING::ConstTargetPtr;
 
 /**
 *
@@ -20,10 +20,10 @@ using TargetPtr_t = TARGETING::TargetPtr;
 class HwAccessIntf
 {
     public:
-    static int getCfamRegister(TargetPtr_t target, uint32_t addr, uint32_t& val);
-    static int putCfamRegister(TargetPtr_t target, uint32_t addr, uint32_t val);
-    static int getScomRegister(TargetPtr_t target, uint64_t addr, uint64_t& val);
-    static int putScomRegister(TargetPtr_t target, uint64_t addr, uint64_t val);
+    static int getCfamRegister(ConstTargetPtr_t target, uint32_t addr, uint32_t& val);
+    static int putCfamRegister(ConstTargetPtr_t target, uint32_t addr, uint32_t val);
+    static int getScomRegister(ConstTargetPtr_t target, uint64_t addr, uint64_t& val);
+    static int putScomRegister(ConstTargetPtr_t target, uint64_t addr, uint64_t val);
     static void* getHwAccessPtr(HwAccessMethod& accessMethod);
 };
 } //namespace hwaccess
