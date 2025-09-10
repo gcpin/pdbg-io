@@ -21,9 +21,12 @@ targeting_lib = shared_library(
 install_headers(
     'target.H',
     'association.H',
+    'target_tmpl.H',
     'xmltohb/attributeenums.H',
     'xmltohb/attributetraits.H',
     'xmltohb/attributestructs.H',
+    'xmltohb/builtins.h',
+    'xmltohb/targAttrIdToName.H',
     'common/entitypath.H',
     'predicates/predicateattr.H',
     'predicates/predicateattrval.H',

@@ -19,6 +19,8 @@ targetsvc_lib = shared_library(
 # Export public headers into /usr/include/target
 install_headers(
   'target_service.H',
+  'target_devtree_map.H',
+  'dtree_loader.H',
   subdir: 'targeting',
   preserve_path: true,
 )
