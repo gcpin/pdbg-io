@@ -42,3 +42,15 @@ targeting_dep = declare_dependency(
     link_with: targeting_lib,
     include_directories: targeting_inc
 )
+
+pkgconfig = import('pkgconfig')
+
+pkgconfig.generate(
+  libraries: targeting_lib,
+  version: meson.project_version(),
+  filebase: 'libtargeting',
+  name: 'libtargeting',
+  description: 'Targeting library',
+  subdirs: 'targeting',
+  requires: ['libfdt']
+)

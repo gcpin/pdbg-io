@@ -30,3 +30,15 @@ targetsvc_dep = declare_dependency(
   include_directories: targetsvc_inc,
   dependencies: [targeting_dep, libfdt_dep, hwaccess_dep],
 )
+
+pkgconfig = import('pkgconfig')
+
+pkgconfig.generate(
+  libraries: targetsvc_lib,
+  version: meson.project_version(),
+  filebase: 'libtargetsvc',
+  name: 'libtargetsvc',
+  description: 'Targeting service library',
+  subdirs: 'targeting',
+  requires: ['libtargeting', 'libfdt', 'libhwaccess']
+)

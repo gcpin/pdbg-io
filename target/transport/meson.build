@@ -28,3 +28,14 @@ install_headers(
   preserve_path: true,
 )
 
+pkgconfig = import('pkgconfig')
+
+pkgconfig.generate(
+  libraries: libtransport,
+  version: meson.project_version(),
+  filebase: 'libtransport',
+  name: 'libtransport',
+  description: 'transport library',
+  subdirs: 'transport',
+  requires: ['libtargeting', 'libfdt']
+)

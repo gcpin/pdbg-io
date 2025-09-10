@@ -29,3 +29,14 @@ hwaccess_dep = declare_dependency(
     include_directories: hwaccess_inc
 )
 
+pkgconfig = import('pkgconfig')
+
+pkgconfig.generate(
+  libraries: hwaccess_lib,
+  version: meson.project_version(),
+  filebase: 'libhwaccess',
+  name: 'libhwaccess',
+  description: 'Hardware access library',
+  subdirs: 'hwaccess',
+  requires: ['libfdt', 'libtargeting', 'libtransport']
+)
