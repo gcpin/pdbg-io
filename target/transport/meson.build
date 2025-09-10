@@ -24,6 +24,7 @@ transport_dep = declare_dependency(
 # Install headers under transport
 install_headers(
   'transport.H',
-  subdir: 'transport'
+  subdir: 'transport',
+  preserve_path: true,
 )
 

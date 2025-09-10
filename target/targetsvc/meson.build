@@ -17,7 +17,11 @@ targetsvc_lib = shared_library(
 )
 
 # Export public headers into /usr/include/target
-install_headers('target_service.H', subdir: 'targeting')
+install_headers(
+  'target_service.H',
+  subdir: 'targeting',
+  preserve_path: true,
+)
 
 targetsvc_dep = declare_dependency(
   link_with: targetsvc_lib,

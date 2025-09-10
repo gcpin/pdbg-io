@@ -18,7 +18,11 @@ hwaccess_lib = shared_library(
 )
 
 # Export public headers into /usr/include/hwaccess
-install_headers('hw_access_intf.H', subdir: 'hwaccess')
+install_headers(
+  'hw_access_intf.H',
+  subdir: 'hwaccess',
+  preserve_path: true,
+)
 
 hwaccess_dep = declare_dependency(
     link_with: hwaccess_lib,

@@ -31,6 +31,7 @@ install_headers(
     'predicates/predicateisfunctional.H',
     'predicates/predicatepostfixexpr.H',
     subdir: 'targeting',
+    preserve_path: true,
 )
 
 # Declare dependency for consumers
